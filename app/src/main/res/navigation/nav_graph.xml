@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmenta">
+    <fragment
+        android:id="@+id/fragmenta"
+        android:name="com.example.prakt5.Fragmenta"
+        android:label="Fragment 1"
+        tools:layout="@layout/fragmenta" >
+    <action
+        android:id="@+id/action_fragmenta_fragmentb"
+        app:destination="@+id/fragmentb" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentb"
+        android:name="com.example.prakt5.Fragmentb"
+        android:label="Fragment 2"
+        tools:layout="@layout/fragmentb" >
+        <action
+            android:id="@+id/action_fragmentb_fragmentc"
+            app:destination="@+id/fragmentc" />
+        <action
+            android:id="@+id/action_fragmentb_fragmenta"
+            app:destination="@+id/fragmenta" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentc"
+        android:name="com.example.prakt5.Fragmentc"
+        android:label="Fragment 3"
+        tools:layout="@layout/fragmentc" >
+        <action
+            android:id="@+id/action_fragmentc_fragmentb"
+            app:destination="@+id/fragmentb" />
+    </fragment>
+
+</navigation>
